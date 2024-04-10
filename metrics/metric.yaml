@@ -1,0 +1,14 @@
+apiVersion: metrics.keptn.sh/v1alpha3
+kind: KeptnMetric
+metadata:
+  name: cpu-throttling
+  namespace: podtato-kubectl
+spec:
+  provider:
+    name: my-provider
+  query: "sum(kube_pod_container_resource_limits{resource='cpu'})"
+  fetchIntervalSeconds: 10
+  range:
+    interval: "5m"
+    step: "1m"
+    aggregation: "avg"
