@@ -13,6 +13,7 @@ apply:
 	kubectl apply -f deployment.yaml
 	kubectl apply -f metric.yaml
 	kubectl apply -f metric-provider.yaml
+	kubectl apply -f slack-secret.yaml
 	kubectl apply -f pre-deploy-eval.yaml
 	kubectl apply -f post-deploy-task.yaml
 	kubectl apply -f appcontext.yaml
