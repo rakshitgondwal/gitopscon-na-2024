@@ -11,10 +11,6 @@
     helm repo update
     helm upgrade --install keptn keptn/keptn -n keptn-system --create-namespace --wait
     ```
-    or if you wish to install using YAML manifests
-    ```
-    kubectl apply -f https://github.com/keptn/lifecycle-toolkit/releases/download/v0.7.1/manifest.yaml
-    ```
 
 - **Setup Prometheus on your cluster**
     You can setup prometheus from both `lifecycle/` or `metrics/`. `cd` into any one of these and do a

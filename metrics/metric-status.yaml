@@ -1,0 +1,91 @@
+```
+ts=2024-04-11T07:44:32.159Z caller=main.go:543 level=info msg="Starting Prometheus Server" mode=server version="(version=2.39.1, branch=HEAD, revision=dcd6af9e0d56165c6f5c64ebbc1fae798d24933a)"
+ts=2024-04-11T07:44:32.159Z caller=main.go:548 level=info build_context="(go=go1.19.2, user=root@273d60c69592, date=20221007-15:57:09)"
+ts=2024-04-11T07:44:32.159Z caller=main.go:549 level=info host_details="(Linux 5.15.146.1-microsoft-standard-WSL2 #1 SMP Thu Jan 11 04:09:03 UTC 2024 x86_64 prometheus-k8s-0 )"
+ts=2024-04-11T07:44:32.159Z caller=main.go:550 level=info fd_limits="(soft=1048576, hard=1048576)"
+ts=2024-04-11T07:44:32.159Z caller=main.go:551 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+ts=2024-04-11T07:44:32.161Z caller=web.go:559 level=info component=web msg="Start listening for connections" address=0.0.0.0:9090
+ts=2024-04-11T07:44:32.167Z caller=tls_config.go:231 level=info component=web msg="TLS is disabled." http2=false
+ts=2024-04-11T07:44:32.165Z caller=main.go:980 level=info msg="Starting TSDB ..."
+ts=2024-04-11T07:44:32.252Z caller=head.go:551 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+ts=2024-04-11T07:44:32.252Z caller=head.go:595 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=2.618µs
+ts=2024-04-11T07:44:32.252Z caller=head.go:601 level=info component=tsdb msg="Replaying WAL, this may take a while"
+ts=2024-04-11T07:44:32.253Z caller=head.go:672 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=0
+ts=2024-04-11T07:44:32.253Z caller=head.go:709 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=18.895µs wal_replay_duration=225.608µs wbl_replay_duration=141ns total_replay_duration=262.751µs
+ts=2024-04-11T07:44:32.254Z caller=main.go:1001 level=info fs_type=EXT4_SUPER_MAGIC
+ts=2024-04-11T07:44:32.254Z caller=main.go:1004 level=info msg="TSDB started"
+ts=2024-04-11T07:44:32.254Z caller=main.go:1184 level=info msg="Loading configuration file" filename=/etc/prometheus/config_out/prometheus.env.yaml
+ts=2024-04-11T07:44:32.350Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:32.351Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:32.351Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:32.351Z caller=kubernetes.go:326 level=info component="discovery manager notify" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:32.959Z caller=main.go:1221 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/config_out/prometheus.env.yaml totalDuration=705.111467ms db_storage=2.989µs remote_storage=2.408µs web_handler=727ns query_engine=2.216µs scrape=1.055431ms scrape_sd=907.932µs notify=22.797µs notify_sd=224.243µs rules=607.91989ms tracing=10.441µs
+ts=2024-04-11T07:44:32.960Z caller=main.go:965 level=info msg="Server is ready to receive web requests."
+ts=2024-04-11T07:44:32.960Z caller=manager.go:943 level=info component="rule manager" msg="Starting rule manager..."
+ts=2024-04-11T07:44:32.960Z caller=main.go:1184 level=info msg="Loading configuration file" filename=/etc/prometheus/config_out/prometheus.env.yaml
+ts=2024-04-11T07:44:33.052Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:33.052Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:33.053Z caller=kubernetes.go:326 level=info component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:33.053Z caller=kubernetes.go:326 level=info component="discovery manager notify" discovery=kubernetes msg="Using pod service account via in-cluster config"
+ts=2024-04-11T07:44:33.468Z caller=main.go:1221 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/config_out/prometheus.env.yaml totalDuration=507.965937ms db_storage=2.264µs remote_storage=2.217µs web_handler=594ns query_engine=1.635µs scrape=106.257µs scrape_sd=1.012512ms notify=26.506µs notify_sd=229.725µs rules=414.240187ms tracing=8.024µs
+ts=2024-04-11T07:51:42.874Z caller=manager.go:683 level=warn component="rule manager" file=/etc/prometheus/rules/prometheus-k8s-rulefiles-0/monitoring-kubernetes-monitoring-rules-aff7e11e-ac97-4491-a6fa-fc449697b7eb.yaml group=kube-apiserver-availability.rules name=code_verb:apiserver_request_total:increase30d index=0 msg="Rule evaluation result discarded" err="duplicate sample for timestamp" sample="{__name__=\"code_verb:apiserver_request_total:increase30d\", code=\"200\", verb=\"GET\"} => 409918.56685714296 @[1712821722875]"
+ts=2024-04-11T07:51:42.874Z caller=manager.go:683 level=warn component="rule manager" file=/etc/prometheus/rules/prometheus-k8s-rulefiles-0/monitoring-kubernetes-monitoring-rules-aff7e11e-ac97-4491-a6fa-fc449697b7eb.yaml group=kube-apiserver-availability.rules name=code_verb:apiserver_request_total:increase30d index=0 msg="Rule evaluation result discarded" err="duplicate sample for timestamp" sample="{__name__=\"code_verb:apiserver_request_total:increase30d\", code=\"200\", verb=\"LIST\"} => 552156.761142857 @[1712821722875]"
+ts=2024-04-11T07:51:42.874Z caller=manager.go:683 level=warn component="rule manager" file=/etc/prometheus/rules/prometheus-k8s-rulefiles-0/monitoring-kubernetes-monitoring-rules-aff7e11e-ac97-4491-a6fa-fc449697b7eb.yaml group=kube-apiserver-availability.rules name=code_verb:apiserver_request_total:increase30d index=0 msg="Rule evaluation result discarded" err="duplicate sample for timestamp" sample="{__name__=\"code_verb:apiserver_request_total:increase30d\", code=\"200\", verb=\"PUT\"} => 254745.12685714284 @[1712821722875]"
+ts=2024-04-11T07:51:42.874Z caller=manager.go:683 level=warn component="rule manager" file=/etc/prometheus/rules/prometheus-k8s-rulefiles-0/monitoring-kubernetes-monitoring-rules-aff7e11e-ac97-4491-a6fa-fc449697b7eb.yaml group=kube-apiserver-availability.rules name=code_verb:apiserver_request_total:increase30d index=0 msg="Rule evaluation result discarded" err="duplicate sample for timestamp" sample="{__name__=\"code_verb:apiserver_request_total:increase30d\", code=\"201\", verb=\"POST\"} => 36080.556 @[1712821722875]"
+ts=2024-04-11T07:51:42.874Z caller=manager.go:683 level=warn component="rule manager" file=/etc/prometheus/rules/prometheus-k8s-rulefiles-0/monitoring-kubernetes-monitoring-rules-aff7e11e-ac97-4491-a6fa-fc449697b7eb.yaml group=kube-apiserver-availability.rules name=code_verb:apiserver_request_total:increase30d index=0 msg="Rule evaluation result discarded" err="duplicate sample for timestamp" sample="{__name__=\"code_verb:apiserver_request_total:increase30d\", code=\"304\", verb=\"GET\"} => 107758.6457142857 @[1712821722875]"
+```
+
+```
+2024-04-11T07:53:58Z    INFO    KeptnMetric Controller  Reconciling Metric      {"requestInfo": {"name":"cpu-throttling","namespace":"podtato-kubectl"}}
+2024-04-11T07:53:58Z    INFO    KeptnMetric Controller  Running query: /api/v1/query_range?query=sum(kube_pod_container_resource_limits{resource='cpu'})&start=1712821738&end=1712822038&step=1m0s
+I0411 07:54:02.054887       1 server.go:92] Checking configuration of keptn-metrics server
+I0411 07:54:02.054997       1 server.go:107] Keptn Metrics server enabled: true
+I0411 07:54:12.054911       1 server.go:92] Checking configuration of keptn-metrics server
+I0411 07:54:12.054958       1 server.go:107] Keptn Metrics server enabled: true
+2024-04-11T07:54:18Z    ERROR   KeptnMetric Controller  Failed to evaluate the query    {"Response from provider was:": "", "error": "Post \"http://prometheus-k8s.monitoring.svc.cluster.local:9090/api/v1/query_range\": context deadline exceeded"}
+github.com/keptn/lifecycle-toolkit/metrics-operator/controllers/metrics.(*KeptnMetricReconciler).getStepQueryResults
+        /workspace/controllers/metrics/controller.go:170
+github.com/keptn/lifecycle-toolkit/metrics-operator/controllers/metrics.(*KeptnMetricReconciler).getResults
+        /workspace/controllers/metrics/controller.go:155
+github.com/keptn/lifecycle-toolkit/metrics-operator/controllers/metrics.(*KeptnMetricReconciler).Reconcile
+        /workspace/controllers/metrics/controller.go:106
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-04-11T07:54:18Z    ERROR   KeptnMetric Controller  Failed to evaluate the query    {"Response from provider was:": "", "error": "Post \"http://prometheus-k8s.monitoring.svc.cluster.local:9090/api/v1/query_range\": context deadline exceeded"}
+github.com/keptn/lifecycle-toolkit/metrics-operator/controllers/metrics.(*KeptnMetricReconciler).updateMetric
+        /workspace/controllers/metrics/controller.go:140
+github.com/keptn/lifecycle-toolkit/metrics-operator/controllers/metrics.(*KeptnMetricReconciler).Reconcile
+        /workspace/controllers/metrics/controller.go:108
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-04-11T07:54:18Z    INFO    Warning: Reconciler returned both a non-zero result and a non-nil error. The result will always be ignored if the error is non-nil and the non-nil error causes reqeueuing with exponential backoff. For more details, see: https://pkg.go.dev/sigs.k8s.io/controller-runtime/pkg/reconcile#Reconciler  {"controller": "keptnmetric", "controllerGroup": "metrics.keptn.sh", "controllerKind": "KeptnMetric", "KeptnMetric": {"name":"cpu-throttling","namespace":"podtato-kubectl"}, "namespace": "podtato-kubectl", "name": "cpu-throttling", "reconcileID": "867b0282-33fe-47cf-bb13-0b414ca375de"}
+2024-04-11T07:54:18Z    ERROR   Reconciler error        {"controller": "keptnmetric", "controllerGroup": "metrics.keptn.sh", "controllerKind": "KeptnMetric", "KeptnMetric": {"name":"cpu-throttling","namespace":"podtato-kubectl"}, "namespace": "podtato-kubectl", "name": "cpu-throttling", "reconcileID": "867b0282-33fe-47cf-bb13-0b414ca375de", "error": "Post \"http://prometheus-k8s.monitoring.svc.cluster.local:9090/api/v1/query_range\": context deadline exceeded"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+I0411 07:54:18.007155       1 provider.go:123] "UpdateFunc" obj={"apiVersion":"metrics.keptn.sh/v1beta1","kind":"KeptnMetric","metadata":{"annotations":{"kubectl.kubernetes.io/last-applied-configuration":"{\"apiVersion\":\"metrics.keptn.sh/v1alpha3\",\"kind\":\"KeptnMetric\",\"metadata\":{\"annotations\":{},\"name\":\"cpu-throttling\",\"namespace\":\"podtato-kubectl\"},\"spec\":{\"fetchIntervalSeconds\":10,\"provider\":{\"name\":\"my-provider\"},\"query\":\"sum(kube_pod_container_resource_limits{resource='cpu'})\",\"range\":{\"aggregation\":\"avg\",\"interval\":\"5m\",\"step\":\"1m\"}}}\n"},"creationTimestamp":"2024-04-11T07:51:58Z","generation":1,"managedFields":[{"apiVersion":"metrics.keptn.sh/v1alpha3","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{".":{},"f:fetchIntervalSeconds":{},"f:provider":{".":{},"f:name":{}},"f:query":{},"f:range":{".":{},"f:aggregation":{},"f:interval":{},"f:step":{}}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2024-04-11T07:51:58Z"},{"apiVersion":"metrics.keptn.sh/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{".":{},"f:errMsg":{},"f:lastUpdated":{}}},"manager":"manager","operation":"Update","subresource":"status","time":"2024-04-11T07:54:18Z"}],"name":"cpu-throttling","namespace":"podtato-kubectl","resourceVersion":"3746","uid":"ce701960-b0cc-45d4-b2be-a9515b1850ca"},"spec":{"fetchIntervalSeconds":10,"provider":{"name":"my-provider"},"query":"sum(kube_pod_container_resource_limits{resource='cpu'})","range":{"aggregation":"avg","interval":"5m","step":"1m"}},"status":{"errMsg":"Post \"http://prometheus-k8s.monitoring.svc.cluster.local:9090/api/v1/query_range\": context deadline exceeded","lastUpdated":"2024-04-11T07:54:18Z"}}
+I0411 07:54:18.007179       1 provider.go:155] "No value available, using default value" name="cpu-throttling" defaultValue="0.0"
+2024-04-11T07:54:18Z    INFO    KeptnMetric Controller  Reconciling Metric      {"requestInfo": {"name":"cpu-throttling","namespace":"podtato-kubectl"}}
+2024-04-11T07:54:18Z    INFO    KeptnMetric Controller  Metric has not been updated for the configured interval. Skipping       {"requestInfo": {"name":"cpu-throttling","namespace":"podtato-kubectl"}}
+I0411 07:54:22.055026       1 server.go:92] Checking configuration of keptn-metrics server
+I0411 07:54:22.055055       1 server.go:107] Keptn Metrics server enabled: true
+2024-04-11T07:54:28Z    INFO    KeptnMetric Controller  Reconciling Metric      {"requestInfo": {"name":"cpu-throttling","namespace":"podtato-kubectl"}}
+2024-04-11T07:54:28Z    INFO    KeptnMetric Controller  Running query: /api/v1/query_range?query=sum(kube_pod_container_resource_limits{resource='cpu'})&start=1712821768&end=1712822068&step=1m0s
+I0411 07:54:32.055478       1 server.go:92] Checking configuration of keptn-metrics server
+I0411 07:54:32.055533       1 server.go:107] Keptn Metrics server enabled: true
+```
