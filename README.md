@@ -19,7 +19,14 @@
     ```
 
 ## For lifecycle part:
-...
+```
+make apply
+```
+
+To uninstall:
+```
+make delete
+```
 
 ## For metrics part:
 
