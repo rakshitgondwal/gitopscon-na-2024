@@ -7,4 +7,4 @@ spec:
   preDeploymentEvaluations:
     - app-pre-deploy-eval
   postDeploymentTasks:
-    - post-deployment-notification
+    - post-deployment-task

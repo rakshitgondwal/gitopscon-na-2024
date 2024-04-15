@@ -1,11 +1,12 @@
 apiVersion: lifecycle.keptn.sh/v1beta1
 kind: KeptnTaskDefinition
 metadata:
-  name: post-deployment-notification
+  name: post-deployment-task
   namespace: podtato-kubectl
 spec:
   function:
-    httpRef:
-      url: https://raw.githubusercontent.com/keptn/lifecycle-toolkit/main/runtimes/deno-runtime/samples/ts/slack.ts
-    secureParameters:
-      secret: slack-secret
+    inline:
+      code: |
+            let message: string = 'Succesfully Deployed!';
+            console.log(message);
+    
